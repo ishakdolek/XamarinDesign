@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="HydMobileApp.View.HydMasterPage.HydMasterMainPage" Title="HYD">
+  <ContentPage.Content>
+
+    <StackLayout Padding="5,10,0,0">
+            <StackLayout Padding="0,10,0,20"  HorizontalOptions="CenterAndExpand" VerticalOptions="Fill">
+                <Image Source="logo.png"/>
+            </StackLayout>
+            <ListView x:Name="listMenu" ItemsSource="{Binding Menu}">
+        <ListView.ItemTemplate>
+          <DataTemplate>
+            <ImageCell Text="{Binding Name}"> </ImageCell>
+          </DataTemplate>
+        </ListView.ItemTemplate>
+      </ListView>
+    </StackLayout>
+    <!--<TableView Intent="Menu">
+			<TableRoot>
+				<TableSection>
+					<control:CustomImageCell ImageSource="location.png" Text="Localização" />
+					<control:CustomImageCell ImageSource="settings.png" Text="Configurações" />
+					<control:CustomImageCell ImageSource="email.png" Text="E-mail" />
+				</TableSection>
+			</TableRoot>
+		</TableView>-->
+  </ContentPage.Content>
+</ContentPage>
