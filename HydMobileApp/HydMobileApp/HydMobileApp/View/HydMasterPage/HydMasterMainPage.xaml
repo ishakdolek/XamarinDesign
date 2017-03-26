@@ -2,21 +2,21 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="HydMobileApp.View.HydMasterPage.HydMasterMainPage" Title="HYD">
-  <ContentPage.Content>
+    <ContentPage.Content>
 
-    <StackLayout Padding="5,10,0,0">
+        <StackLayout Padding="5,10,0,0">
             <StackLayout Padding="0,10,0,20"  HorizontalOptions="CenterAndExpand" VerticalOptions="Fill">
                 <Image Source="logo.png"/>
             </StackLayout>
-            <ListView x:Name="listMenu" ItemsSource="{Binding Menu}">
-        <ListView.ItemTemplate>
-          <DataTemplate>
-            <ImageCell Text="{Binding Name}"> </ImageCell>
-          </DataTemplate>
-        </ListView.ItemTemplate>
-      </ListView>
-    </StackLayout>
-    <!--<TableView Intent="Menu">
+            <ListView x:Name="listMenu" ItemSelected="ListMenu_OnItemSelected" ItemsSource="{Binding Menu}">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ImageCell Text="{Binding Name}"></ImageCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </StackLayout>
+        <!--<TableView Intent="Menu">
 			<TableRoot>
 				<TableSection>
 					<control:CustomImageCell ImageSource="location.png" Text="Localização" />
@@ -25,5 +25,5 @@
 				</TableSection>
 			</TableRoot>
 		</TableView>-->
-  </ContentPage.Content>
+    </ContentPage.Content>
 </ContentPage>

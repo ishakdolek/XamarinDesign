@@ -1,6 +1,4 @@
-﻿using HydMobileApp.Model;
-using HydMobileApp.Page;
-using HydMobileApp.View.Slider;
+﻿using HydMobileApp.View.HydMasterPage;
 using Xamarin.Forms;
 
 namespace HydMobileApp
@@ -10,7 +8,7 @@ namespace HydMobileApp
      
         public App()
         {
-            MainPage = new NavigationPage(new HydMasterPage());
+            MainPage = new MainPage();
         }
 
         protected override void OnStart()

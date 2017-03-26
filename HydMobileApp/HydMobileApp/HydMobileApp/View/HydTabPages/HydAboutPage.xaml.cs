@@ -7,8 +7,6 @@ namespace HydMobileApp.View.HydTabPages
         public HydAboutPage()
         {
             InitializeComponent();
-            Title = "Hakkımızda";
-            Icon = "world.png";
         }
     }
 }
